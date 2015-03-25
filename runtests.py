@@ -11,6 +11,7 @@ try:
                 "ENGINE": "django.db.backends.sqlite3",
             }
         },
+        MIDDLEWARE_CLASSES=(),
         ROOT_URLCONF="tests.urls",
         INSTALLED_APPS=[
             "django.contrib.auth",
