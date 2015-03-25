@@ -27,7 +27,7 @@ case-insensitivity to your regular expressions.::
         (r'^(?i)logout/$', do_logout),
     )
 
-From Alex Martelli's [Stack Overflow explanation](http://stackoverflow.com/a/1515657/122291).
+From Alex Martelli's `Stack Overflow explanation <http://stackoverflow.com/a/1515657/122291>`_.
 
 However this doesn't do anything to match slugs, which are often case-sensitive
 matched by default - it's up to the app. If the app uses a straightforward `=`
