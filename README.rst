@@ -13,8 +13,13 @@ django-icase
 
 A few tools for helping with case-insensitvity in Django URLs.
 
-- 404 handler that redirects non-matched, non-lowercase URLs
-- middleware that enforces lower-cased URLs
+- 404 handler that redirects non-matched, non-lowercase URLs. E.g. if `/About/`
+  is not matched, the handler will redirect to `/about/` before returning a 404
+- Middleware that enforces lower-cased URLs. E.g. all non-lowercased URLs will
+  be redirected to their lowercased form.
+
+Overview
+--------
 
 If you only need to match URL patterns, then it's simple to add
 case-insensitivity to your regular expressions.::
