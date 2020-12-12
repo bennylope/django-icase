@@ -32,7 +32,10 @@ from django.shortcuts import redirect
 
 class LowerCased(object):
 
-    def handle_request(self, request):
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
         if request.path == request.path.lower():
-            return None
+            return self.get_response(request)
         return redirect(request.path.lower())
